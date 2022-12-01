@@ -1,3 +1,3 @@
 package com.nitishsharma.dagger2example
 
-const val TAG = "Dagger"
+const val TAG = "DaggerTest"
