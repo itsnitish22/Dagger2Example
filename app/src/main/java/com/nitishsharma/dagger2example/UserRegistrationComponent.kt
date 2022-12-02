@@ -4,5 +4,7 @@ import dagger.Component
 
 @Component
 interface UserRegistrationComponent {
-    fun getUserRegistrationService(): UserRegistrationService
+
+    //pass the CONSUMER as the parameter
+    fun inject(mainActivity: MainActivity)
 }

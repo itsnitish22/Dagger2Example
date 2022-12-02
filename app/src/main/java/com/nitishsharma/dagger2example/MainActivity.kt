@@ -2,14 +2,20 @@ package com.nitishsharma.dagger2example
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
+    @Inject
+    private lateinit var userRegistrationService: UserRegistrationService
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val userRegistrationService =
-            DaggerUserRegistrationComponent.builder().build().getUserRegistrationService()
+        val component =
+            DaggerUserRegistrationComponent.builder().build()
+        component.inject(this) //call inject function
+
         userRegistrationService.registerUser("20bcs4122@cuchd.in", "hsitiN")
     }
 }
