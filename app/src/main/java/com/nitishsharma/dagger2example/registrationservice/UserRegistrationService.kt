@@ -1,4 +1,4 @@
-package com.nitishsharma.dagger2example
+package com.nitishsharma.dagger2example.registrationservice
 
 import javax.inject.Inject
 
