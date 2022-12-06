@@ -1,7 +1,6 @@
-package com.nitishsharma.dagger2example.registrationservice
+package com.nitishsharma.dagger2example
 
 import android.util.Log
-import com.nitishsharma.dagger2example.TAG
 import javax.inject.Inject
 
 interface UserRepository {
