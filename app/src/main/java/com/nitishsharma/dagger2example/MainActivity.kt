@@ -2,11 +2,13 @@ package com.nitishsharma.dagger2example
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.nitishsharma.dagger2example.component.DaggerUserRegistrationComponent
+import com.nitishsharma.dagger2example.services.UserRegistrationService
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
     @Inject
-    private lateinit var userRegistrationService: UserRegistrationService
+    lateinit var userRegistrationService: UserRegistrationService
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
