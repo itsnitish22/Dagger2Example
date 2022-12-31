@@ -6,10 +6,12 @@ import com.nitishsharma.dagger2example.actions.SaveUserToMongoDB
 import dagger.Binds
 import dagger.Module
 import javax.inject.Named
+import javax.inject.Singleton
 
 @Module
 abstract class DatabaseServiceModule {
 
+    @Singleton
     @Named("firebase")
     @Binds
     abstract fun saveUserToFirebase(saveUserToFirebase: SaveUserToFirebase): SaveUserAction

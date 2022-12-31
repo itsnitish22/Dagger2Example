@@ -5,7 +5,9 @@ import com.nitishsharma.dagger2example.modules.DatabaseServiceModule
 import com.nitishsharma.dagger2example.modules.NotificationServiceModule
 import dagger.BindsInstance
 import dagger.Component
+import javax.inject.Singleton
 
+@Singleton
 @Component(modules = [DatabaseServiceModule::class, NotificationServiceModule::class])
 interface UserRegistrationComponent {
     //removed because we don't want to have functions corresponding to each dependency
