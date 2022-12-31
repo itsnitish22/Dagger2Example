@@ -1,5 +1,6 @@
 package com.nitishsharma.dagger2example.constants
 
-const val TAG = "Dagger"
+const val TAG = "DaggerTest"
+
 class Constants {
 }

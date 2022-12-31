@@ -2,8 +2,9 @@ package com.nitishsharma.dagger2example.services
 
 import com.nitishsharma.dagger2example.actions.SaveUserAction
 import com.nitishsharma.dagger2example.actions.SendEmailAction
+import javax.inject.Inject
 
-class UserRegistrationService(
+class UserRegistrationService @Inject constructor(
     private val saveUserAction: SaveUserAction,
     private val sendEmailAction: SendEmailAction
 ) {
