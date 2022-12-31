@@ -14,9 +14,8 @@ class SaveUserToFirebase @Inject constructor() : SaveUserAction {
     }
 }
 
-class SaveUserToMongoDB : SaveUserAction {
+class SaveUserToMongoDB @Inject constructor() : SaveUserAction {
     override fun saveUserAction(email: String, password: String) {
         Log.i(TAG, "User saved to Mongo DB")
     }
-
 }
