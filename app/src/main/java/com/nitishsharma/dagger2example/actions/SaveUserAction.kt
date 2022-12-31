@@ -3,7 +3,6 @@ package com.nitishsharma.dagger2example.actions
 import android.util.Log
 import com.nitishsharma.dagger2example.constants.TAG
 import javax.inject.Inject
-import javax.inject.Singleton
 
 interface SaveUserAction {
     fun saveUserAction(email: String, password: String)

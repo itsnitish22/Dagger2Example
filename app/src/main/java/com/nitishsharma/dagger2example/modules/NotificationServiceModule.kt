@@ -7,7 +7,6 @@ import com.nitishsharma.dagger2example.qualifiers.MessageNotificationQualifier
 import dagger.Module
 import dagger.Provides
 import javax.inject.Named
-import javax.inject.Singleton
 
 @Module
 class NotificationServiceModule() {
