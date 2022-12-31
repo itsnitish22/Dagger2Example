@@ -9,17 +9,18 @@ import dagger.Provides
 import javax.inject.Named
 
 @Module
-class NotificationServiceModule {
-
-    @MessageNotificationQualifier
-    @Provides
-    fun sendNotificationByMessage(): SendNotificationAction {
-        return MessageService()
-    }
+class NotificationServiceModule() {
 
     @Named("email")
     @Provides
     fun sendNotificationByEmail(emailService: EmailService): SendNotificationAction {
         return emailService
     }
+
+    @MessageNotificationQualifier
+    @Provides
+    fun sendNotificationByMessage(countryCode: String): SendNotificationAction {
+        return MessageService(countryCode = countryCode)
+    }
+
 }

@@ -14,8 +14,8 @@ class EmailService @Inject constructor() : SendNotificationAction {
     }
 }
 
-class MessageService : SendNotificationAction {
+class MessageService(val countryCode: String): SendNotificationAction {
     override fun sendNotification(to: String, from: String, body: String) {
-        Log.i(TAG, "Message Sent")
+        Log.i(TAG, "Message Sent with Country Code: $countryCode")
     }
 }

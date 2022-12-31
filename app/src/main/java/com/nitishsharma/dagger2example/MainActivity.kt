@@ -15,7 +15,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //initialize
-        DaggerUserRegistrationComponent.builder().build().injectDependenciesToMainActivity(this)
+        DaggerUserRegistrationComponent.factory().createFactory(countryCode = "+91")
+            .injectDependenciesToMainActivity(this)
 
         userRegistrationService.registerUser("20bcs4122@cuchd.in", "hsitiN")
     }
