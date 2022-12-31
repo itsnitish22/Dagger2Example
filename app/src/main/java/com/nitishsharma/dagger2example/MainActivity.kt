@@ -21,3 +21,8 @@ class MainActivity : AppCompatActivity() {
         userRegistrationService.registerUser("20bcs4122@cuchd.in", "hsitiN")
     }
 }
+/*
+we tell two things to dagger:
+1. how to create an object
+2. places where we're going to consume the object
+ */
